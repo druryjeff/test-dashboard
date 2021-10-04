@@ -1,0 +1,80 @@
+.profile {
+	grid-column: 1;
+	grid-row: 1 / span 3;
+	background-color: $color-blue-4;
+	padding: 1.5rem;
+	// grid
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr 1fr;
+	header {
+		grid-row: 1;// grid
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		button {
+			justify-self: start;
+		}
+		p {
+			justify-self: end;
+		}
+	}
+	.bio {
+		text-align: center;
+		grid-row: 2;
+		h1 {
+			text-transform: capitalize;
+			line-height: 1.7;
+		}
+		.headshot {
+			height: 5rem;
+			border-radius: 50%;
+			border: .25rem solid $color-blue-2;
+			display: block;
+			margin: 0 auto .5rem;
+		}
+		p {
+			margin: 0;
+			color: $color-grey-1;
+			line-height: 1.7;
+		}
+		.social-media {
+			display: flex;
+			justify-content: center;
+		}
+	}
+	.friends {
+		grid-row: 3;
+		align-self: end;
+		h2 {
+			text-transform: uppercase;
+			color: $color-blue-1;
+			font-size: 1rem;
+			letter-spacing: 1px;
+			margin: 0 0 1rem;
+		}
+		li {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: .5rem;
+			a {
+				color: $color-blue-2;
+			}
+			.friend {
+				display: flex;
+  			align-items: center;
+				.headshot {
+					margin-right: 1rem;
+					height: 2.5rem;
+					border-radius: 50%;
+					border: .125rem solid $color-blue-2;
+				}
+				h4 {
+					font-weight: 400;
+					color: $color-blue-1;
+					margin: 0;
+				}
+			}
+		}
+	}
+}

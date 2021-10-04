@@ -1,0 +1,50 @@
+.this-week {
+	grid-column: 2;
+	grid-row: 3;
+	// style
+	border: 1px solid $color-blue-3;
+	border-radius: 1rem;
+	padding: 1.5rem;
+	margin-bottom: 1rem;
+	// grid
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+	align-items:center;
+	h1 {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	header {
+		grid-column: 2;
+		grid-row: 1;
+		justify-self: end;
+		button {
+				color: $color-grey-1;
+			}
+	}
+	.categories {
+		grid-column: 1 / span 2;
+		// grid
+		display: grid;
+		grid-template-columns: repeat(3,auto);
+		h2 {
+			margin: 0;
+			font-size: 1rem;
+			color: $color-blue-1;
+			font-weight: 400;
+		}
+		p {
+			font-size: 3rem;
+			margin: 0;
+			color: $color-blue-2;
+			span {
+				color: $color-blue-3;
+				&::before {
+					content: '/';
+					color: $color-blue-3;
+				}
+			}
+		}
+	}
+}

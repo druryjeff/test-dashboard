@@ -1,0 +1,12 @@
+main {
+	display: grid;
+	grid-template-columns: 1fr 4fr 1fr;
+	grid-template-rows: auto auto auto;
+	grid-gap: 1rem;
+	height: 100%;
+}
+
+.prep {
+	grid-column: 3;
+	grid-row: 2 / span 2;
+}
